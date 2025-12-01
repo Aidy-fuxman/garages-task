@@ -1,0 +1,22 @@
+.multi-select-field {
+  width: 100%;
+}
+
+mat-form-field {
+  --mdc-filled-text-field-active-indicator-color: #ff0033;
+  --mdc-filled-text-field-focus-active-indicator-color: #ff0033;
+  --mdc-filled-text-field-label-focus-color: #ff0033;
+}
+
+mat-select {
+  color: #fff !important;
+}
+
+mat-option {
+  background: #1b1b1b !important;
+  color: white !important;
+
+  &:hover {
+    background: #ff0033 !important;
+  }
+}

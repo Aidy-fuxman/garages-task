@@ -1,0 +1,47 @@
+<div class="page-container">
+
+  <mat-card class="header-card">
+    <h1>ניהול מוסכים</h1>
+    <p>ייבוא מוסכים מה-API הממשלתי ושמירתם במסד הנתונים</p>
+  </mat-card>
+
+  <div class="content">
+
+    <mat-card class="multi-card">
+      <h2>בחרי מוסכים מה-API</h2>
+
+      <app-garage-multi-select
+        [items]="govGarages"
+        (selectionChange)="onSelectionChange($event)">
+      </app-garage-multi-select>
+
+      <button
+        mat-raised-button
+        color="warn"
+        class="add-btn mat-elevation-z4"
+        (click)="addSelectedGarages()">
+        <mat-icon>add_circle</mat-icon>
+        הוספה למסד הנתונים
+      </button>
+    </mat-card>
+
+    <mat-card class="table-card">
+      <h2>מוסכים שנשמרו במסד הנתונים</h2>
+
+      @if (dbGarages.length === 0) {
+        <p class="empty">אין עדיין מוסכים במערכת</p>
+      } @else {
+        <app-garages-table [items]="dbGarages"></app-garages-table>
+      }
+    </mat-card>
+
+  </div>
+
+  @if (loading) {
+    <div class="loading-overlay">
+      <div class="spinner"></div>
+      <span>טוען נתונים...</span>
+    </div>
+  }
+
+</div>

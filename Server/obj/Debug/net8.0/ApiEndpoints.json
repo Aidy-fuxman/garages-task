@@ -1,0 +1,38 @@
+[
+  {
+    "ContainingType": "Server.Controllers.GaragesController",
+    "Method": "GetAll",
+    "RelativePath": "api/Garages",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.GaragesController",
+    "Method": "AddGarage",
+    "RelativePath": "api/Garages",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "garage",
+        "Type": "Server.Models.Garage",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.GaragesController",
+    "Method": "FetchFromGovAPI",
+    "RelativePath": "api/Garages/fetch",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

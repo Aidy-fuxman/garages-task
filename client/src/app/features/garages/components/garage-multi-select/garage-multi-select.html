@@ -1,0 +1,16 @@
+<mat-form-field appearance="fill" class="multi-select-field">
+  <mat-label>בחר מוסכים</mat-label>
+
+  <mat-select
+    [multiple]="true"
+    [value]="selected"
+    (valueChange)="onSelectChange($event)">
+
+    @for (g of items; track g.garageNumber) {
+      <mat-option [value]="g">
+        {{ g.name }} — {{ g.city }}
+      </mat-option>
+    }
+
+  </mat-select>
+</mat-form-field>

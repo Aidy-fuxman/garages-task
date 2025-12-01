@@ -1,0 +1,32 @@
+<table mat-table [dataSource]="items" class="garage-table">
+
+  <ng-container matColumnDef="garageNumber">
+    <th mat-header-cell *matHeaderCellDef> מספר </th>
+    <td mat-cell *matCellDef="let g"> {{ g.garageNumber }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> שם </th>
+    <td mat-cell *matCellDef="let g"> {{ g.name }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="address">
+    <th mat-header-cell *matHeaderCellDef> כתובת </th>
+    <td mat-cell *matCellDef="let g"> {{ g.address }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="city">
+    <th mat-header-cell *matHeaderCellDef> עיר </th>
+    <td mat-cell *matCellDef="let g"> {{ g.city }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="telephone">
+    <th mat-header-cell *matHeaderCellDef> טלפון </th>
+    <td mat-cell *matCellDef="let g"> {{ g.telephone }} </td>
+  </ng-container>
+
+  
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+</table>
